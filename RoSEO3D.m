@@ -38,7 +38,7 @@ gamma_hat = sum(gamma_hat(:,:,1:3),3);
 [row,col] = find(gamma_hat>50);
 value = (diag(gamma_hat(row,col))).';
 lc_max = [col.';row.']-[(img_size+1)/2+1,(img_size+1)/2+1].';
-thred = imgPara.PSF_size_opt;
+thred = imgPara.combine_thred;
 lc_max = combine_simimar_points(lc_max,value,thred);
 loc_rec = cat(1,lc_max*imgPara.pix_sizex,zeros(1,size(lc_max,2)));
 if isempty(lc_max)

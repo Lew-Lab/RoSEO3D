@@ -77,7 +77,7 @@ imgPara.PSF_size = imgPara.PSF_size_opt;
 imgPara_B.Bx = Bx;
 imgPara_B.By = By;
 imgPara.PSF_size_opt_min = 11; % the minimum size for croping the PSF ,use 21 for my experimental pixOL data
-combine_thred = 11;
+imgPara.combine_thred = 11;
 %% build microscope object used in the RoSEO3D step2 and step3
 
 n1 = Nanoscope('imageSize', imgSize,...
